@@ -15,6 +15,7 @@ struct Constants {
     static let locationTrackingDistanceFilter: Double = 50
     static let maxFetchedLocations: Int = 20
 
+    static let databaseName: String = "PlacesNearMe"
     static let mapStyleWithoutPOI: String = """
         [
           {

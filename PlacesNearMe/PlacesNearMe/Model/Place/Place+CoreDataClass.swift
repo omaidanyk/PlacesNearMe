@@ -15,6 +15,8 @@ import Foundation
 
 @objc(Place)
 public class Place: NSManagedObject {
+    static let entityName: String = "Place"
+
     func update(with attributes: [String: Any]) {
         name = attributes[AttributeName.placeName] as? String
         address = attributes[AttributeName.placeAddress] as? String

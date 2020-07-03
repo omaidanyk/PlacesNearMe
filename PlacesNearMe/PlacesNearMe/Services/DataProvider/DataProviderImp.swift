@@ -9,8 +9,13 @@
 import UIKit
 
 class DataProviderImp {
-    private var storage: Storage? = StorageImp()
+    private var storage: Storage?
     private var geoService: GeolocationService? = GeolocationServiceImp()
+
+    init() {
+        let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+        self.storage = appDelegate?.storage
+    }
 }
 
 // MARK: - DataProvider

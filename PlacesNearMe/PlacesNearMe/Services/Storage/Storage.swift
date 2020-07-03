@@ -13,14 +13,3 @@ protocol Storage {
     func removeAllPlaces()
     func savePlaces(_ placesData: [[String: Any]?]) -> [Place]
 }
-
-class StorageImp: Storage {
-    func loadStoredPlaces() -> [Place]? {
-        return nil
-    }
-
-    func removeAllPlaces() { }
-    func savePlaces(_ placesData: [[String: Any]?]) -> [Place] {
-        return []
-    }
-}
