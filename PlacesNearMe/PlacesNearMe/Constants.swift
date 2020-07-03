@@ -11,7 +11,6 @@ import Foundation
 struct Constants {
 
     // these constants can be moved to some settings
-    static let defaultCameraZoomLevel: Float = 14
     static let locationTrackingDistanceFilter: Double = 50
     static let maxFetchedLocations: Int = 20
 

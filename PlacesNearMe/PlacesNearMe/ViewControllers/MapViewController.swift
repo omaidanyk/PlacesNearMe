@@ -17,8 +17,8 @@ class MapViewController: UIViewController {
     // MARK: - Properties
 
     private let dataProvider: DataProvider = DataProviderImp()
-    private var locationManager = CLLocationManager()
     private var firstLoad: Bool = true
+    private var locationManager = CLLocationManager()
     private var selectedPlace: String?
 
     // MARK: - Setup
@@ -65,6 +65,13 @@ class MapViewController: UIViewController {
         setupLocationManager()
         setupLocationPermissions()
         setupMapStyleWithoutPOI()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        guard let selectedPlaceID = selectedPlace else { return }
+        loadStoredPlace(selectedPlaceID)
     }
 
     // MARK: - Places workaround
@@ -128,12 +135,29 @@ class MapViewController: UIViewController {
             }
         }
     }
+
+    private func loadStoredPlace(_ placeID: String) {
+        guard let storedPlaces = dataProvider.getStoredPlaces() else { return }
+        guard let place = storedPlaces.first(where: { $0.longLabel == placeID }) else { return }
+        display(storedPlaces)
+
+        moveTo(place.location, zoomLevel: .detail)
+    }
     // MARK: - Camera move
 
-    private func moveTo(_ position: CLLocationCoordinate2D) {
+    private func moveTo(_ position: CLLocationCoordinate2D, zoomLevel: CameraZoomLevel = .default) {
         let camera = GMSCameraPosition.camera(withTarget: position,
-                                              zoom: Constants.defaultCameraZoomLevel)
+                                              zoom: zoomLevel.rawValue)
         mapView.animate(to: camera)
+    }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedPlaceID = selectedPlace else { return }
+        guard let presentable = segue.destination as? PlacePresentable else { return }
+
+        presentable.showSelectedPlace(selectedPlaceID)
     }
 }
 
@@ -182,5 +206,13 @@ extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         mapView.selectedMarker = nil
         selectedPlace = nil
+    }
+}
+
+// MARK: - MapPresentable
+
+extension MapViewController: PlacePresentable {
+    func showSelectedPlace(_ placeId: String) {
+        selectedPlace = placeId
     }
 }

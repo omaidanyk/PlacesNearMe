@@ -28,6 +28,10 @@
 		BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */; };
 		BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */; };
 		BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */; };
+		BB4F0AA024AFB97C0087F298 /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9F24AFB97C0087F298 /* PlaceListViewController.swift */; };
+		BB4F0AA224AFB9FF0087F298 /* UIImage+SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0AA124AFB9FF0087F298 /* UIImage+SystemImage.swift */; };
+		BB4F0AA424AFBCA80087F298 /* CameraZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0AA324AFBCA80087F298 /* CameraZoomLevel.swift */; };
+		BB4F0AA624AFC28E0087F298 /* PlacePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0AA524AFC28E0087F298 /* PlacePresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGisAPI.swift; sourceTree = "<group>"; };
 		BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+middleLocation.swift"; sourceTree = "<group>"; };
 		BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategory.swift; sourceTree = "<group>"; };
+		BB4F0A9F24AFB97C0087F298 /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
+		BB4F0AA124AFB9FF0087F298 /* UIImage+SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SystemImage.swift"; sourceTree = "<group>"; };
+		BB4F0AA324AFBCA80087F298 /* CameraZoomLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraZoomLevel.swift; sourceTree = "<group>"; };
+		BB4F0AA524AFC28E0087F298 /* PlacePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A7824AF9B900087F298 /* MapViewController.swift */,
+				BB4F0A9F24AFB97C0087F298 /* PlaceListViewController.swift */,
+				BB4F0AA524AFC28E0087F298 /* PlacePresentable.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -144,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */,
+				BB4F0AA324AFBCA80087F298 /* CameraZoomLevel.swift */,
 				BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */,
 			);
 			path = Helpers;
@@ -200,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */,
+				BB4F0AA124AFB9FF0087F298 /* UIImage+SystemImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,17 +382,21 @@
 				BB4F0A8D24AFA6200087F298 /* DataProvider.swift in Sources */,
 				BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */,
 				BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */,
+				BB4F0AA424AFBCA80087F298 /* CameraZoomLevel.swift in Sources */,
+				BB4F0AA224AFB9FF0087F298 /* UIImage+SystemImage.swift in Sources */,
 				BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */,
 				BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */,
 				BB4F0A9724AFAE5C0087F298 /* CoreDataStack.swift in Sources */,
 				BB4F0A9524AFAC520087F298 /* GeolocationService.swift in Sources */,
 				BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */,
 				BB4F0A9324AFAC0D0087F298 /* DataProviderImp.swift in Sources */,
+				BB4F0AA024AFB97C0087F298 /* PlaceListViewController.swift in Sources */,
 				BB4F0A6A24AF96020087F298 /* PlacesNearMe.xcdatamodeld in Sources */,
 				BB4F0A6024AF96020087F298 /* AppDelegate.swift in Sources */,
 				BB4F0A6224AF96020087F298 /* SceneDelegate.swift in Sources */,
 				BB4F0A7924AF9B900087F298 /* MapViewController.swift in Sources */,
 				BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */,
+				BB4F0AA624AFC28E0087F298 /* PlacePresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
