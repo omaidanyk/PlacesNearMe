@@ -6,8 +6,8 @@
 //  Copyright © 2020 omaid. All rights reserved.
 //
 
-import UIKit
 import GoogleMaps
+import UIKit
 
 class MapViewController: UIViewController {
     // MARK: - IBOutlets

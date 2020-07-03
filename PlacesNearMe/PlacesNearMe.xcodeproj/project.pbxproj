@@ -17,6 +17,9 @@
 		BB4F0A7924AF9B900087F298 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A7824AF9B900087F298 /* MapViewController.swift */; };
 		BB4F0A7B24AF9C010087F298 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A7A24AF9C010087F298 /* Constants.swift */; };
 		BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A7C24AF9F3C0087F298 /* Licence.swift */; };
+		BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8024AFA3020087F298 /* Place+CoreDataClass.swift */; };
+		BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8124AFA3020087F298 /* Place+CoreDataProperties.swift */; };
+		BB4F0A8624AFA3BB0087F298 /* AttributeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		BB4F0A7824AF9B900087F298 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BB4F0A7A24AF9C010087F298 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB4F0A7C24AF9F3C0087F298 /* Licence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Licence.swift; sourceTree = "<group>"; };
+		BB4F0A8024AFA3020087F298 /* Place+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB4F0A8124AFA3020087F298 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,14 +85,15 @@
 			children = (
 				BB4F0A7A24AF9C010087F298 /* Constants.swift */,
 				BB4F0A7C24AF9F3C0087F298 /* Licence.swift */,
+				BB4F0A7E24AFA2040087F298 /* Model */,
 				BB4F0A7724AF9B6E0087F298 /* ViewControllers */,
+				BB4F0A8424AFA3470087F298 /* Helpers */,
 				BB4F0A5F24AF96020087F298 /* AppDelegate.swift */,
 				BB4F0A6124AF96020087F298 /* SceneDelegate.swift */,
 				BB4F0A6524AF96020087F298 /* Main.storyboard */,
 				BB4F0A6B24AF96050087F298 /* Assets.xcassets */,
 				BB4F0A6D24AF96050087F298 /* LaunchScreen.storyboard */,
 				BB4F0A7024AF96050087F298 /* Info.plist */,
-				BB4F0A6824AF96020087F298 /* PlacesNearMe.xcdatamodeld */,
 			);
 			path = PlacesNearMe;
 			sourceTree = "<group>";
@@ -97,6 +104,32 @@
 				BB4F0A7824AF9B900087F298 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB4F0A7E24AFA2040087F298 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A7F24AFA2DA0087F298 /* Place */,
+				BB4F0A6824AF96020087F298 /* PlacesNearMe.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB4F0A7F24AFA2DA0087F298 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A8024AFA3020087F298 /* Place+CoreDataClass.swift */,
+				BB4F0A8124AFA3020087F298 /* Place+CoreDataProperties.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		BB4F0A8424AFA3470087F298 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D4A10F3C19119D5F32A7C1BC /* Pods */ = {
@@ -260,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB4F0A7B24AF9C010087F298 /* Constants.swift in Sources */,
+				BB4F0A8624AFA3BB0087F298 /* AttributeName.swift in Sources */,
+				BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */,
 				BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */,
+				BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */,
 				BB4F0A6A24AF96020087F298 /* PlacesNearMe.xcdatamodeld in Sources */,
 				BB4F0A6024AF96020087F298 /* AppDelegate.swift in Sources */,
 				BB4F0A6224AF96020087F298 /* SceneDelegate.swift in Sources */,
