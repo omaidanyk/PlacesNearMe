@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
 
     // MARK: - Properties
 
+    private let dataProvider: DataProvider = DataProviderImp()
     private var locationManager = CLLocationManager()
     private var firstLoad: Bool = true
 
@@ -65,6 +66,58 @@ class MapViewController: UIViewController {
         setupMapStyleWithoutPOI()
     }
 
+    // MARK: - Places workaround
+
+    private func loadVisiblePlaces() {
+        let storedPlaces = dataProvider.getStoredPlaces()
+        let places = visiblePlaces(from: storedPlaces)
+
+        if places.isEmpty {
+            searchForNewPlaces()
+        } else {
+            display(places)
+        }
+    }
+
+    private func searchForNewPlaces() {
+        let visibleBouds = GMSCoordinateBounds(region: mapView.projection.visibleRegion())
+        let simpleBounds: CoordinateBounds = (visibleBouds.northEast, visibleBouds.southWest)
+        dataProvider.searchPlaces(in: simpleBounds) { [weak self] (places, error) in
+            self?.handleFoundPlaces(places, error: error)
+        }
+    }
+
+    private func handleFoundPlaces(_ places: [Place]?, error: Error?) {
+        guard let places = places else {
+            print("Failed to search places from api:\n\(error?.localizedDescription ?? "")")
+            return
+        }
+        display(places)
+    }
+
+    private func visiblePlaces(from places: [Place]?) -> [Place] {
+        guard let places = places else { return [] }
+
+        let visible: [Place] = places.filter({
+            return mapView.projection.contains($0.location)
+        })
+
+        return visible
+    }
+
+    private func display(_ places: [Place]) {
+        // remove current markers
+        mapView.clear()
+
+        // create new markers
+        for place in places {
+            let marker = GMSMarker(position: place.location)
+            marker.title = place.name
+            marker.snippet = place.type
+            marker.userData = place.longLabel
+            marker.map = mapView
+        }
+    }
     // MARK: - Camera move
 
     private func moveTo(_ position: CLLocationCoordinate2D) {
