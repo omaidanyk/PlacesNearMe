@@ -19,6 +19,7 @@ class MapViewController: UIViewController {
     private let dataProvider: DataProvider = DataProviderImp()
     private var locationManager = CLLocationManager()
     private var firstLoad: Bool = true
+    private var selectedPlace: String?
 
     // MARK: - Setup
 
@@ -72,7 +73,11 @@ class MapViewController: UIViewController {
         let storedPlaces = dataProvider.getStoredPlaces()
         let places = visiblePlaces(from: storedPlaces)
 
-        if places.isEmpty {
+        // note: Here we will search for new places on every camera move/zoom, except first load.
+        // It makes updates more smooth
+        // Remove <!firstLoad> check if you don't want to request new places
+        //   while at least one stored place is visible
+        if places.isEmpty || !firstLoad {
             searchForNewPlaces()
         } else {
             display(places)
@@ -116,6 +121,11 @@ class MapViewController: UIViewController {
             marker.snippet = place.type
             marker.userData = place.longLabel
             marker.map = mapView
+
+            // restore selection if any
+            if let selected = selectedPlace, place.longLabel == selected {
+                mapView.selectedMarker = marker
+            }
         }
     }
     // MARK: - Camera move
@@ -159,5 +169,18 @@ extension MapViewController: GMSMapViewDelegate {
         if !firstLoad {
             loadVisiblePlaces()
         }
+    }
+
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        // avoid scrolling to the marker on marker tap
+        mapView.selectedMarker = marker
+        selectedPlace = marker.userData as? String
+
+        return true
+    }
+
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        mapView.selectedMarker = nil
+        selectedPlace = nil
     }
 }
