@@ -16,15 +16,6 @@ struct Constants {
 
     static let databaseName: String = "PlacesNearMe"
     static let arcGisLocatorPath = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
-    static let mapStyleWithoutPOI: String = """
-        [
-          {
-            "featureType": "poi",
-            "elementType": "all",
-            "stylers": [
-              { "visibility": "off" }
-            ]
-          }
-        ]
-    """
+    static let mapLightStyleName = "DayStyle"
+    static let mapDarkStyleName = "NightStyle"
 }

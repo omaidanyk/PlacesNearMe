@@ -30,10 +30,17 @@ class MapViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
 
-    private func setupMapStyleWithoutPOI() {
-        // disable default points of interest
+    private func setupMapStyle() {
+        let isDarkMode = traitCollection.userInterfaceStyle == .dark
+        let styleName = isDarkMode ? Constants.mapDarkStyleName : Constants.mapLightStyleName
+
         do {
-            mapView.mapStyle = try GMSMapStyle(jsonString: Constants.mapStyleWithoutPOI)
+            if let styleURL = Bundle.main.url(forResource: styleName,
+                                              withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                print("Unable to find \(styleName).json")
+            }
         } catch {
             print("Failed to change map style: \(error.localizedDescription)")
         }
@@ -64,14 +71,22 @@ class MapViewController: UIViewController {
 
         setupLocationManager()
         setupLocationPermissions()
-        setupMapStyleWithoutPOI()
+        setupMapStyle()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        guard let selectedPlaceID = selectedPlace else { return }
-        loadStoredPlace(selectedPlaceID)
+        if let selectedPlaceID = selectedPlace {
+            loadStoredPlace(selectedPlaceID)
+        }
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle != previousTraitCollection?.userInterfaceStyle {
+            setupMapStyle()
+        }
     }
 
     // MARK: - Places workaround
