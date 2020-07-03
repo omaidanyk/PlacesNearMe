@@ -28,13 +28,19 @@
 		BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */; };
 		BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */; };
 		BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */; };
+		BB4F0AA024AFB97C0087F298 /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9F24AFB97C0087F298 /* PlaceListViewController.swift */; };
+		BB4F0AA224AFB9FF0087F298 /* UIImage+SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0AA124AFB9FF0087F298 /* UIImage+SystemImage.swift */; };
+		BB4F0AA424AFBCA80087F298 /* CameraZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0AA324AFBCA80087F298 /* CameraZoomLevel.swift */; };
+		BB4F0AA624AFC28E0087F298 /* PlacePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0AA524AFC28E0087F298 /* PlacePresentable.swift */; };
+		BB4F0AA824AFD0230087F298 /* NightStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = BB4F0AA724AFD0230087F298 /* NightStyle.json */; };
+		BB4F0AAA24AFD0980087F298 /* DayStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = BB4F0AA924AFD0970087F298 /* DayStyle.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4039E66BC4C381BAE35E92AB /* Pods-PlacesNearMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesNearMe.release.xcconfig"; path = "Target Support Files/Pods-PlacesNearMe/Pods-PlacesNearMe.release.xcconfig"; sourceTree = "<group>"; };
 		6812E63ED6484092DD870E7A /* Pods_PlacesNearMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacesNearMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		987638AEB23301E5151615B4 /* Pods-PlacesNearMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesNearMe.debug.xcconfig"; path = "Target Support Files/Pods-PlacesNearMe/Pods-PlacesNearMe.debug.xcconfig"; sourceTree = "<group>"; };
-		BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4F0A5C24AF96020087F298 /* Places Near Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Places Near Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4F0A5F24AF96020087F298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB4F0A6124AF96020087F298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB4F0A6624AF96020087F298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +62,12 @@
 		BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGisAPI.swift; sourceTree = "<group>"; };
 		BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+middleLocation.swift"; sourceTree = "<group>"; };
 		BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategory.swift; sourceTree = "<group>"; };
+		BB4F0A9F24AFB97C0087F298 /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
+		BB4F0AA124AFB9FF0087F298 /* UIImage+SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SystemImage.swift"; sourceTree = "<group>"; };
+		BB4F0AA324AFBCA80087F298 /* CameraZoomLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraZoomLevel.swift; sourceTree = "<group>"; };
+		BB4F0AA524AFC28E0087F298 /* PlacePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresentable.swift; sourceTree = "<group>"; };
+		BB4F0AA724AFD0230087F298 /* NightStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NightStyle.json; sourceTree = "<group>"; };
+		BB4F0AA924AFD0970087F298 /* DayStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DayStyle.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +103,7 @@
 		BB4F0A5D24AF96020087F298 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */,
+				BB4F0A5C24AF96020087F298 /* Places Near Me.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +122,7 @@
 				BB4F0A5F24AF96020087F298 /* AppDelegate.swift */,
 				BB4F0A6124AF96020087F298 /* SceneDelegate.swift */,
 				BB4F0A7024AF96050087F298 /* Info.plist */,
+				BB4F0AAB24AFD09D0087F298 /* MapStyles */,
 			);
 			path = PlacesNearMe;
 			sourceTree = "<group>";
@@ -118,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A7824AF9B900087F298 /* MapViewController.swift */,
+				BB4F0A9F24AFB97C0087F298 /* PlaceListViewController.swift */,
+				BB4F0AA524AFC28E0087F298 /* PlacePresentable.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -144,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */,
+				BB4F0AA324AFBCA80087F298 /* CameraZoomLevel.swift */,
 				BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */,
 			);
 			path = Helpers;
@@ -200,8 +216,18 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */,
+				BB4F0AA124AFB9FF0087F298 /* UIImage+SystemImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB4F0AAB24AFD09D0087F298 /* MapStyles */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0AA724AFD0230087F298 /* NightStyle.json */,
+				BB4F0AA924AFD0970087F298 /* DayStyle.json */,
+			);
+			path = MapStyles;
 			sourceTree = "<group>";
 		};
 		D4A10F3C19119D5F32A7C1BC /* Pods */ = {
@@ -234,7 +260,7 @@
 			);
 			name = PlacesNearMe;
 			productName = PlacesNearMe;
-			productReference = BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */;
+			productReference = BB4F0A5C24AF96020087F298 /* Places Near Me.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -277,7 +303,9 @@
 			files = (
 				BB4F0A6F24AF96050087F298 /* LaunchScreen.storyboard in Resources */,
 				BB4F0A6C24AF96050087F298 /* Assets.xcassets in Resources */,
+				BB4F0AA824AFD0230087F298 /* NightStyle.json in Resources */,
 				BB4F0A6724AF96020087F298 /* Main.storyboard in Resources */,
+				BB4F0AAA24AFD0980087F298 /* DayStyle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,17 +398,21 @@
 				BB4F0A8D24AFA6200087F298 /* DataProvider.swift in Sources */,
 				BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */,
 				BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */,
+				BB4F0AA424AFBCA80087F298 /* CameraZoomLevel.swift in Sources */,
+				BB4F0AA224AFB9FF0087F298 /* UIImage+SystemImage.swift in Sources */,
 				BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */,
 				BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */,
 				BB4F0A9724AFAE5C0087F298 /* CoreDataStack.swift in Sources */,
 				BB4F0A9524AFAC520087F298 /* GeolocationService.swift in Sources */,
 				BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */,
 				BB4F0A9324AFAC0D0087F298 /* DataProviderImp.swift in Sources */,
+				BB4F0AA024AFB97C0087F298 /* PlaceListViewController.swift in Sources */,
 				BB4F0A6A24AF96020087F298 /* PlacesNearMe.xcdatamodeld in Sources */,
 				BB4F0A6024AF96020087F298 /* AppDelegate.swift in Sources */,
 				BB4F0A6224AF96020087F298 /* SceneDelegate.swift in Sources */,
 				BB4F0A7924AF9B900087F298 /* MapViewController.swift in Sources */,
 				BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */,
+				BB4F0AA624AFC28E0087F298 /* PlacePresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = omaid.demo.PlacesNearMe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Places Near Me";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -552,7 +584,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = omaid.demo.PlacesNearMe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Places Near Me";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

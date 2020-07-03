@@ -17,8 +17,9 @@ class MapViewController: UIViewController {
     // MARK: - Properties
 
     private let dataProvider: DataProvider = DataProviderImp()
-    private var locationManager = CLLocationManager()
     private var firstLoad: Bool = true
+    private var locationManager = CLLocationManager()
+    private var selectedPlace: String?
 
     // MARK: - Setup
 
@@ -29,10 +30,17 @@ class MapViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
 
-    private func setupMapStyleWithoutPOI() {
-        // disable default points of interest
+    private func setupMapStyle() {
+        let isDarkMode = traitCollection.userInterfaceStyle == .dark
+        let styleName = isDarkMode ? Constants.mapDarkStyleName : Constants.mapLightStyleName
+
         do {
-            mapView.mapStyle = try GMSMapStyle(jsonString: Constants.mapStyleWithoutPOI)
+            if let styleURL = Bundle.main.url(forResource: styleName,
+                                              withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                print("Unable to find \(styleName).json")
+            }
         } catch {
             print("Failed to change map style: \(error.localizedDescription)")
         }
@@ -63,7 +71,22 @@ class MapViewController: UIViewController {
 
         setupLocationManager()
         setupLocationPermissions()
-        setupMapStyleWithoutPOI()
+        setupMapStyle()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let selectedPlaceID = selectedPlace {
+            loadStoredPlace(selectedPlaceID)
+        }
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle != previousTraitCollection?.userInterfaceStyle {
+            setupMapStyle()
+        }
     }
 
     // MARK: - Places workaround
@@ -72,7 +95,11 @@ class MapViewController: UIViewController {
         let storedPlaces = dataProvider.getStoredPlaces()
         let places = visiblePlaces(from: storedPlaces)
 
-        if places.isEmpty {
+        // note: Here we will search for new places on every camera move/zoom, except first load.
+        // It makes updates more smooth
+        // Remove <!firstLoad> check if you don't want to request new places
+        //   while at least one stored place is visible
+        if places.isEmpty || !firstLoad {
             searchForNewPlaces()
         } else {
             display(places)
@@ -116,14 +143,36 @@ class MapViewController: UIViewController {
             marker.snippet = place.type
             marker.userData = place.longLabel
             marker.map = mapView
+
+            // restore selection if any
+            if let selected = selectedPlace, place.longLabel == selected {
+                mapView.selectedMarker = marker
+            }
         }
+    }
+
+    private func loadStoredPlace(_ placeID: String) {
+        guard let storedPlaces = dataProvider.getStoredPlaces() else { return }
+        guard let place = storedPlaces.first(where: { $0.longLabel == placeID }) else { return }
+        display(storedPlaces)
+
+        moveTo(place.location, zoomLevel: .detail)
     }
     // MARK: - Camera move
 
-    private func moveTo(_ position: CLLocationCoordinate2D) {
+    private func moveTo(_ position: CLLocationCoordinate2D, zoomLevel: CameraZoomLevel = .default) {
         let camera = GMSCameraPosition.camera(withTarget: position,
-                                              zoom: Constants.defaultCameraZoomLevel)
+                                              zoom: zoomLevel.rawValue)
         mapView.animate(to: camera)
+    }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedPlaceID = selectedPlace else { return }
+        guard let presentable = segue.destination as? PlacePresentable else { return }
+
+        presentable.showSelectedPlace(selectedPlaceID)
     }
 }
 
@@ -159,5 +208,26 @@ extension MapViewController: GMSMapViewDelegate {
         if !firstLoad {
             loadVisiblePlaces()
         }
+    }
+
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        // avoid scrolling to the marker on marker tap
+        mapView.selectedMarker = marker
+        selectedPlace = marker.userData as? String
+
+        return true
+    }
+
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        mapView.selectedMarker = nil
+        selectedPlace = nil
+    }
+}
+
+// MARK: - MapPresentable
+
+extension MapViewController: PlacePresentable {
+    func showSelectedPlace(_ placeId: String) {
+        selectedPlace = placeId
     }
 }
