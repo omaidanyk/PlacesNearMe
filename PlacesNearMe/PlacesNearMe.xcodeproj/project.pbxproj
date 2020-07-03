@@ -38,7 +38,7 @@
 		4039E66BC4C381BAE35E92AB /* Pods-PlacesNearMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesNearMe.release.xcconfig"; path = "Target Support Files/Pods-PlacesNearMe/Pods-PlacesNearMe.release.xcconfig"; sourceTree = "<group>"; };
 		6812E63ED6484092DD870E7A /* Pods_PlacesNearMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacesNearMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		987638AEB23301E5151615B4 /* Pods-PlacesNearMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesNearMe.debug.xcconfig"; path = "Target Support Files/Pods-PlacesNearMe/Pods-PlacesNearMe.debug.xcconfig"; sourceTree = "<group>"; };
-		BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4F0A5C24AF96020087F298 /* Places Near Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Places Near Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4F0A5F24AF96020087F298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB4F0A6124AF96020087F298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB4F0A6624AF96020087F298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		BB4F0A5D24AF96020087F298 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */,
+				BB4F0A5C24AF96020087F298 /* Places Near Me.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 			);
 			name = PlacesNearMe;
 			productName = PlacesNearMe;
-			productReference = BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */;
+			productReference = BB4F0A5C24AF96020087F298 /* Places Near Me.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -549,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = omaid.demo.PlacesNearMe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Places Near Me";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -568,7 +568,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = omaid.demo.PlacesNearMe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Places Near Me";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
