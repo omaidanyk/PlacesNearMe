@@ -16,13 +16,3 @@ protocol DataProvider {
     func getStoredPlaces() -> [Place]?
     func searchPlaces(in region: CoordinateBounds, completion: @escaping([Place]?, Error?) -> Void)
 }
-
-class DataProviderImp: DataProvider {
-    func getStoredPlaces() -> [Place]? {
-        return nil
-    }
-
-    func searchPlaces(in region: CoordinateBounds, completion: @escaping ([Place]?, Error?) -> Void) {
-
-    }
-}
