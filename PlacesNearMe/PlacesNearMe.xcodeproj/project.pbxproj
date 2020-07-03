@@ -10,11 +10,24 @@
 		934A6DDF68CC3AAAC9FB19A4 /* Pods_PlacesNearMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6812E63ED6484092DD870E7A /* Pods_PlacesNearMe.framework */; };
 		BB4F0A6024AF96020087F298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A5F24AF96020087F298 /* AppDelegate.swift */; };
 		BB4F0A6224AF96020087F298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A6124AF96020087F298 /* SceneDelegate.swift */; };
-		BB4F0A6424AF96020087F298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A6324AF96020087F298 /* ViewController.swift */; };
 		BB4F0A6724AF96020087F298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4F0A6524AF96020087F298 /* Main.storyboard */; };
 		BB4F0A6A24AF96020087F298 /* PlacesNearMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A6824AF96020087F298 /* PlacesNearMe.xcdatamodeld */; };
 		BB4F0A6C24AF96050087F298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4F0A6B24AF96050087F298 /* Assets.xcassets */; };
 		BB4F0A6F24AF96050087F298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4F0A6D24AF96050087F298 /* LaunchScreen.storyboard */; };
+		BB4F0A7924AF9B900087F298 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A7824AF9B900087F298 /* MapViewController.swift */; };
+		BB4F0A7B24AF9C010087F298 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A7A24AF9C010087F298 /* Constants.swift */; };
+		BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A7C24AF9F3C0087F298 /* Licence.swift */; };
+		BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8024AFA3020087F298 /* Place+CoreDataClass.swift */; };
+		BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8124AFA3020087F298 /* Place+CoreDataProperties.swift */; };
+		BB4F0A8624AFA3BB0087F298 /* AttributeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */; };
+		BB4F0A8D24AFA6200087F298 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A8C24AFA6200087F298 /* DataProvider.swift */; };
+		BB4F0A9124AFABB00087F298 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9024AFABB00087F298 /* Storage.swift */; };
+		BB4F0A9324AFAC0D0087F298 /* DataProviderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9224AFAC0D0087F298 /* DataProviderImp.swift */; };
+		BB4F0A9524AFAC520087F298 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9424AFAC520087F298 /* GeolocationService.swift */; };
+		BB4F0A9724AFAE5C0087F298 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9624AFAE5C0087F298 /* CoreDataStack.swift */; };
+		BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */; };
+		BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */; };
+		BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +37,25 @@
 		BB4F0A5C24AF96020087F298 /* PlacesNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4F0A5F24AF96020087F298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB4F0A6124AF96020087F298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB4F0A6324AF96020087F298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB4F0A6624AF96020087F298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB4F0A6924AF96020087F298 /* PlacesNearMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlacesNearMe.xcdatamodel; sourceTree = "<group>"; };
 		BB4F0A6B24AF96050087F298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB4F0A6E24AF96050087F298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB4F0A7024AF96050087F298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB4F0A7824AF9B900087F298 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BB4F0A7A24AF9C010087F298 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB4F0A7C24AF9F3C0087F298 /* Licence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Licence.swift; sourceTree = "<group>"; };
+		BB4F0A8024AFA3020087F298 /* Place+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB4F0A8124AFA3020087F298 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeName.swift; sourceTree = "<group>"; };
+		BB4F0A8C24AFA6200087F298 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		BB4F0A9024AFABB00087F298 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BB4F0A9224AFAC0D0087F298 /* DataProviderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderImp.swift; sourceTree = "<group>"; };
+		BB4F0A9424AFAC520087F298 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
+		BB4F0A9624AFAE5C0087F298 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGisAPI.swift; sourceTree = "<group>"; };
+		BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+middleLocation.swift"; sourceTree = "<group>"; };
+		BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,16 +99,109 @@
 		BB4F0A5E24AF96020087F298 /* PlacesNearMe */ = {
 			isa = PBXGroup;
 			children = (
+				BB4F0A7A24AF9C010087F298 /* Constants.swift */,
+				BB4F0A9A24AFB1860087F298 /* Extensions */,
+				BB4F0A8424AFA3470087F298 /* Helpers */,
+				BB4F0A7C24AF9F3C0087F298 /* Licence.swift */,
+				BB4F0A7E24AFA2040087F298 /* Model */,
+				BB4F0A8724AFA4B10087F298 /* Services */,
+				BB4F0A7724AF9B6E0087F298 /* ViewControllers */,
+				BB4F0A8B24AFA5E50087F298 /* UI */,
 				BB4F0A5F24AF96020087F298 /* AppDelegate.swift */,
 				BB4F0A6124AF96020087F298 /* SceneDelegate.swift */,
-				BB4F0A6324AF96020087F298 /* ViewController.swift */,
+				BB4F0A7024AF96050087F298 /* Info.plist */,
+			);
+			path = PlacesNearMe;
+			sourceTree = "<group>";
+		};
+		BB4F0A7724AF9B6E0087F298 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A7824AF9B900087F298 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB4F0A7E24AFA2040087F298 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A6824AF96020087F298 /* PlacesNearMe.xcdatamodeld */,
+				BB4F0A7F24AFA2DA0087F298 /* Place */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB4F0A7F24AFA2DA0087F298 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A8024AFA3020087F298 /* Place+CoreDataClass.swift */,
+				BB4F0A8124AFA3020087F298 /* Place+CoreDataProperties.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		BB4F0A8424AFA3470087F298 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */,
+				BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BB4F0A8724AFA4B10087F298 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A8824AFA4CC0087F298 /* DataProvider */,
+				BB4F0A8A24AFA4E20087F298 /* GeolocationService */,
+				BB4F0A8924AFA4D60087F298 /* Storage */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BB4F0A8824AFA4CC0087F298 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A8C24AFA6200087F298 /* DataProvider.swift */,
+				BB4F0A9224AFAC0D0087F298 /* DataProviderImp.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		BB4F0A8924AFA4D60087F298 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A9024AFABB00087F298 /* Storage.swift */,
+				BB4F0A9624AFAE5C0087F298 /* CoreDataStack.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		BB4F0A8A24AFA4E20087F298 /* GeolocationService */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A9424AFAC520087F298 /* GeolocationService.swift */,
+				BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */,
+			);
+			path = GeolocationService;
+			sourceTree = "<group>";
+		};
+		BB4F0A8B24AFA5E50087F298 /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				BB4F0A6524AF96020087F298 /* Main.storyboard */,
 				BB4F0A6B24AF96050087F298 /* Assets.xcassets */,
 				BB4F0A6D24AF96050087F298 /* LaunchScreen.storyboard */,
-				BB4F0A7024AF96050087F298 /* Info.plist */,
-				BB4F0A6824AF96020087F298 /* PlacesNearMe.xcdatamodeld */,
 			);
-			path = PlacesNearMe;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BB4F0A9A24AFB1860087F298 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D4A10F3C19119D5F32A7C1BC /* Pods */ = {
@@ -219,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		FDD4B63F82D465D583286EB7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -245,10 +364,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB4F0A6424AF96020087F298 /* ViewController.swift in Sources */,
+				BB4F0A7B24AF9C010087F298 /* Constants.swift in Sources */,
+				BB4F0A9124AFABB00087F298 /* Storage.swift in Sources */,
+				BB4F0A8624AFA3BB0087F298 /* AttributeName.swift in Sources */,
+				BB4F0A8D24AFA6200087F298 /* DataProvider.swift in Sources */,
+				BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */,
+				BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */,
+				BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */,
+				BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */,
+				BB4F0A9724AFAE5C0087F298 /* CoreDataStack.swift in Sources */,
+				BB4F0A9524AFAC520087F298 /* GeolocationService.swift in Sources */,
+				BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */,
+				BB4F0A9324AFAC0D0087F298 /* DataProviderImp.swift in Sources */,
 				BB4F0A6A24AF96020087F298 /* PlacesNearMe.xcdatamodeld in Sources */,
 				BB4F0A6024AF96020087F298 /* AppDelegate.swift in Sources */,
 				BB4F0A6224AF96020087F298 /* SceneDelegate.swift in Sources */,
+				BB4F0A7924AF9B900087F298 /* MapViewController.swift in Sources */,
+				BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
