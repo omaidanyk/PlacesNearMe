@@ -16,6 +16,7 @@ struct Constants {
     static let maxFetchedLocations: Int = 20
 
     static let databaseName: String = "PlacesNearMe"
+    static let arcGisLocatorPath = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
     static let mapStyleWithoutPOI: String = """
         [
           {

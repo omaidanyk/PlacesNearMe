@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // enable google maps
         GMSServices.provideAPIKey(Licence.googleApiKey)
 
+        // enable ArcGIS
+        ArcGisAPI.licenseAGS()
+
         return true
     }
 

@@ -25,6 +25,9 @@
 		BB4F0A9324AFAC0D0087F298 /* DataProviderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9224AFAC0D0087F298 /* DataProviderImp.swift */; };
 		BB4F0A9524AFAC520087F298 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9424AFAC520087F298 /* GeolocationService.swift */; };
 		BB4F0A9724AFAE5C0087F298 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9624AFAE5C0087F298 /* CoreDataStack.swift */; };
+		BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */; };
+		BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */; };
+		BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		BB4F0A9224AFAC0D0087F298 /* DataProviderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderImp.swift; sourceTree = "<group>"; };
 		BB4F0A9424AFAC520087F298 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
 		BB4F0A9624AFAE5C0087F298 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGisAPI.swift; sourceTree = "<group>"; };
+		BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+middleLocation.swift"; sourceTree = "<group>"; };
+		BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A7A24AF9C010087F298 /* Constants.swift */,
+				BB4F0A9A24AFB1860087F298 /* Extensions */,
 				BB4F0A8424AFA3470087F298 /* Helpers */,
 				BB4F0A7C24AF9F3C0087F298 /* Licence.swift */,
 				BB4F0A7E24AFA2040087F298 /* Model */,
@@ -118,8 +125,8 @@
 		BB4F0A7E24AFA2040087F298 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BB4F0A7F24AFA2DA0087F298 /* Place */,
 				BB4F0A6824AF96020087F298 /* PlacesNearMe.xcdatamodeld */,
+				BB4F0A7F24AFA2DA0087F298 /* Place */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A8524AFA3BB0087F298 /* AttributeName.swift */,
+				BB4F0A9D24AFB21D0087F298 /* PlaceCategory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4F0A9424AFAC520087F298 /* GeolocationService.swift */,
+				BB4F0A9824AFB0C00087F298 /* ArcGisAPI.swift */,
 			);
 			path = GeolocationService;
 			sourceTree = "<group>";
@@ -185,6 +194,14 @@
 				BB4F0A6D24AF96050087F298 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BB4F0A9A24AFB1860087F298 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F0A9B24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D4A10F3C19119D5F32A7C1BC /* Pods */ = {
@@ -351,16 +368,19 @@
 				BB4F0A9124AFABB00087F298 /* Storage.swift in Sources */,
 				BB4F0A8624AFA3BB0087F298 /* AttributeName.swift in Sources */,
 				BB4F0A8D24AFA6200087F298 /* DataProvider.swift in Sources */,
+				BB4F0A9924AFB0C00087F298 /* ArcGisAPI.swift in Sources */,
 				BB4F0A8324AFA3020087F298 /* Place+CoreDataProperties.swift in Sources */,
 				BB4F0A7D24AF9F3C0087F298 /* Licence.swift in Sources */,
 				BB4F0A8224AFA3020087F298 /* Place+CoreDataClass.swift in Sources */,
 				BB4F0A9724AFAE5C0087F298 /* CoreDataStack.swift in Sources */,
 				BB4F0A9524AFAC520087F298 /* GeolocationService.swift in Sources */,
+				BB4F0A9E24AFB21D0087F298 /* PlaceCategory.swift in Sources */,
 				BB4F0A9324AFAC0D0087F298 /* DataProviderImp.swift in Sources */,
 				BB4F0A6A24AF96020087F298 /* PlacesNearMe.xcdatamodeld in Sources */,
 				BB4F0A6024AF96020087F298 /* AppDelegate.swift in Sources */,
 				BB4F0A6224AF96020087F298 /* SceneDelegate.swift in Sources */,
 				BB4F0A7924AF9B900087F298 /* MapViewController.swift in Sources */,
+				BB4F0A9C24AFB19F0087F298 /* CLLocationCoordinate2D+middleLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

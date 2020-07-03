@@ -12,9 +12,3 @@ protocol GeolocationService {
     func searchPlaces(in region: CoordinateBounds,
                       completion: @escaping([[String: Any]?], Error?) -> Void)
 }
-
-class GeolocationServiceImp: GeolocationService {
-    func searchPlaces(in region: CoordinateBounds, completion: @escaping ([[String: Any]?], Error?) -> Void) {
-
-    }
-}

@@ -151,3 +151,13 @@ extension MapViewController: CLLocationManagerDelegate {
         print(error)
     }
 }
+
+// MARK: - GMSMapViewDelegate
+
+extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        if !firstLoad {
+            loadVisiblePlaces()
+        }
+    }
+}

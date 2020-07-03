@@ -10,11 +10,12 @@ import UIKit
 
 class DataProviderImp {
     private var storage: Storage?
-    private var geoService: GeolocationService? = GeolocationServiceImp()
+    private var geoService: GeolocationService
 
     init() {
         let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
         self.storage = appDelegate?.storage
+        self.geoService = ArcGisAPI()
     }
 }
 
@@ -27,7 +28,7 @@ extension DataProviderImp: DataProvider {
 
     func searchPlaces(in region: CoordinateBounds,
                       completion: @escaping ([Place]?, Error?) -> Void) {
-        geoService?.searchPlaces(in: region, completion: { [weak self] (results, error) in
+        geoService.searchPlaces(in: region, completion: { [weak self] (results, error) in
             guard error == nil, results.count > 0 else {
                 print(error?.localizedDescription ?? "Fail to load places from AGS")
                 completion(nil, error)
